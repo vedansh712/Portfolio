@@ -1,0 +1,74 @@
+🎯 Goal
+
+Build a modern, recruiter-friendly personal portfolio website for a Full Stack Developer. The site should combine:
+Minimal & Clean structure (professional, easy to scan).
+Dark & Sleek look (techy, recruiter-appealing).
+Playful Creative touches (animations, gradients, subtle personality).
+
+🏗️ Structure & Sections
+
+Hero Section (Landing)
+Dark sleek background with gradient/glassmorphism effect.
+Name, title (Full Stack Developer), and catchy tagline.
+Professional photo/avatar + subtle animated illustration (e.g., coding animation, floating shapes).
+Call-to-actions: View Resume, Hire Me, Contact.
+About Me
+Clean, minimal text block with a recruiter-friendly intro.
+Highlight unique skills, passions, and strengths.
+Include one fun/creative fact for personality.
+Skills & Tech Stack
+Interactive grid of icons/logos (React, Node.js, Python, MongoDB, etc.).
+Hover effects with skill details.
+Categorized: Frontend, Backend, Databases, Tools, Cloud.
+Projects
+Showcase 4–6 key projects.
+Each project card includes screenshot, title, description, tech stack, GitHub + Live Demo links.
+Filter option (Web Apps, APIs, UI/UX).
+Smooth hover animations.
+Experience Timeline
+Sleek dark timeline with glowing accent highlights.
+Each job in card format: company, role, short impactful description of responsibilities.
+Education / Certifications (Optional)
+Minimal list format, no clutter.
+Testimonials (Optional)
+Carousel of 2–3 short feedback snippets from peers/clients.
+Blog (Optional)
+Section for 2–3 featured posts (if available).
+Contact
+Sleek contact form with recruiter-friendly design.
+Direct links to Email, LinkedIn, GitHub.
+Clean CTA: “Let’s Work Together.”
+Footer
+Simple dark footer with copyright.
+Social media icons.
+Easter egg (e.g., console log message for devs).
+
+🎨 Design System
+
+Colors
+Background: Dark Navy / Charcoal.
+Text: Light Gray / White.
+Accent 1: Blue / Teal.
+Accent 2: Gradient (Blue → Purple or Pink → Orange).
+Typography
+Headings: Bold sans-serif (modern).
+Body: Clean sans-serif (legible, recruiter-friendly).
+Optional playful accent font for headings in Hero.
+Layout
+Grid-based, balanced whitespace.
+Smooth scroll + subtle animations (fade-in, slide-up).
+Responsiveness: desktop, tablet, mobile.
+
+✨ Extra Features
+
+Dark/Light mode toggle.
+Smooth micro-interactions (hover glow, button pulse).
+Subtle animated background (gradient waves, particles, or lines).
+Loading animation when site opens (techy look).
+Easter egg for devs (open console → show fun message).
+
+🚀 Output
+
+Final result should be a single-page portfolio website (SPA style).
+Built with modern stack (React / Next.js / TailwindCSS preferred).
+Recruiter-focused, but with personal flair
