@@ -11,15 +11,17 @@ export default function ProjectsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "Web Apps", "APIs", "UI/UX"];
+  const filters = ["All", "Web Apps", "Extension"];
 
   const projects = [
     {
       title: "Stocai",
+      //   description:
+      //     "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.",
       description:
-        "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.",
+        "Full Stack AI Coaching Platform, Developed leading backend infrastructure and frontend development for scalable applications. Delivered reusable API modules, optimized PostgreSQL schemas and prompt refinement. Implemented security best practices, and streamlined Git workflows for collaborative development.",
       image: "/stocai.png",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      tech: ["React", "Next.js", "Python", "PostgreSQL", "JWT", "OpenAI"],
       category: "Web Apps",
       live: "https://www.mystocai.com/",
       featured: true,
@@ -27,23 +29,23 @@ export default function ProjectsSection() {
     {
       title: "Activity Tracker",
       description:
-        "RESTful API for task management with advanced filtering, real-time notifications, and team collaboration features. Built with Express.js and PostgreSQL.",
-      image: "/stocai.png",
-      tech: ["Express.js", "PostgreSQL", "Socket.io", "JWT"],
-      category: "APIs",
-      github: "#",
-      featured: true,
+        "Browser extension that monitors and analyzes browsing activity, tracking time spent on websites with domain-level insights. Includes customizable time limits, alerts for overuse, and a clean popup UI to manage settings and view statistics. Successfully published on the Microsoft Edge Add-ons Store.",
+      image: "/ActivityTracker.png",
+      tech: ["JavaScript", "HTML", "CSS", "Manifest V3", "Browser APIs"],
+      category: "Extension",
+      github: "https://github.com/vedansh712/Activity-Tracker-extention",
+      live: "https://microsoftedge.microsoft.com/addons/detail/llljlnkcpejaonlbbnodhfjblichghjf",
+      featured: false,
     },
     {
       title: "Akashalabdhi",
       description:
-        "Comprehensive React component library with Storybook documentation. Includes 50+ reusable components with accessibility features.",
-      image: "/stocai.png",
-      tech: ["React", "Storybook", "TypeScript", "CSS-in-JS"],
-      category: "UI/UX",
-      github: "#",
-      live: "#",
-      featured: false,
+        "Developed and launched a dynamic company website on AWS, boosting traffic. Implemented optimizations cutting page load time, increasing user satisfaction and conversions. Built a React app while collaborating with design and business teams to ensure intuitive, market-aligned products.",
+      image: "/akashalabdhi.png",
+      tech: ["React", "TypeScript", "AWS", "Figma", "Git", "HTML", "CSS"],
+      category: "Web Apps",
+      live: "https://akashalabdhi.space/",
+      featured: true,
     },
     // {
     //   title: "Netflix-Clone",
