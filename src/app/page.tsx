@@ -45,7 +45,11 @@ export default function Home() {
     <div
       className={`${isDarkMode ? "dark" : ""} transition-colors duration-300`}
     >
-      <div className="bg-gray-900 dark:bg-gray-900 text-white min-h-screen">
+      <div
+        className={`${
+          isDarkMode ? "bg-gray-900 text-white" : "bg-black text-gray-900"
+        } min-h-screen transition-colors duration-300`}
+      >
         {/* Theme Toggle */}
         <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 

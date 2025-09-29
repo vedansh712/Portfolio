@@ -4,81 +4,80 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github, Filter } from "lucide-react";
+import Image from "next/image";
 
 export default function ProjectsSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filters = ["All", "Web Apps", "APIs", "UI/UX"];
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Stocai",
       description:
         "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.",
-      image: "/api/placeholder/400/250",
+      image: "/stocai.png",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       category: "Web Apps",
-      github: "#",
-      live: "#",
+      live: "https://www.mystocai.com/",
       featured: true,
     },
     {
-      title: "Task Management API",
+      title: "Activity Tracker",
       description:
         "RESTful API for task management with advanced filtering, real-time notifications, and team collaboration features. Built with Express.js and PostgreSQL.",
-      image: "/api/placeholder/400/250",
+      image: "/stocai.png",
       tech: ["Express.js", "PostgreSQL", "Socket.io", "JWT"],
       category: "APIs",
       github: "#",
-      live: "#",
       featured: true,
     },
     {
-      title: "Design System Library",
+      title: "Akashalabdhi",
       description:
         "Comprehensive React component library with Storybook documentation. Includes 50+ reusable components with accessibility features.",
-      image: "/api/placeholder/400/250",
+      image: "/stocai.png",
       tech: ["React", "Storybook", "TypeScript", "CSS-in-JS"],
       category: "UI/UX",
       github: "#",
       live: "#",
       featured: false,
     },
-    {
-      title: "Real-time Chat App",
-      description:
-        "Scalable chat application with WebSocket connections, message encryption, and file sharing capabilities. Supports group chats and video calls.",
-      image: "/api/placeholder/400/250",
-      tech: ["Vue.js", "Socket.io", "Redis", "WebRTC"],
-      category: "Web Apps",
-      github: "#",
-      live: "#",
-      featured: true,
-    },
-    {
-      title: "Analytics Dashboard",
-      description:
-        "Interactive data visualization dashboard with real-time metrics, custom reports, and export functionality. Built for business intelligence.",
-      image: "/api/placeholder/400/250",
-      tech: ["Next.js", "D3.js", "Python", "FastAPI"],
-      category: "Web Apps",
-      github: "#",
-      live: "#",
-      featured: false,
-    },
-    {
-      title: "Mobile App Backend",
-      description:
-        "Robust backend service for mobile applications with user management, push notifications, and offline sync capabilities.",
-      image: "/api/placeholder/400/250",
-      tech: ["Node.js", "MongoDB", "Firebase", "Docker"],
-      category: "APIs",
-      github: "#",
-      live: "#",
-      featured: false,
-    },
+    // {
+    //   title: "Netflix-Clone",
+    //   description:
+    //     "Scalable chat application with WebSocket connections, message encryption, and file sharing capabilities. Supports group chats and video calls.",
+    //   image: "/stocai.png",
+    //   tech: ["Vue.js", "Socket.io", "Redis", "WebRTC"],
+    //   category: "Web Apps",
+    //   github: "#",
+    //   live: "#",
+    //   featured: true,
+    // },
+    // {
+    //   title: "Analytics Dashboard",
+    //   description:
+    //     "Interactive data visualization dashboard with real-time metrics, custom reports, and export functionality. Built for business intelligence.",
+    //   image: "/stocai.png",
+    //   tech: ["Next.js", "D3.js", "Python", "FastAPI"],
+    //   category: "Web Apps",
+    //   github: "#",
+    //   live: "#",
+    //   featured: false,
+    // },
+    // {
+    //   title: "Mobile App Backend",
+    //   description:
+    //     "Robust backend service for mobile applications with user management, push notifications, and offline sync capabilities.",
+    //   image: "/api/placeholder/400/250",
+    //   tech: ["Node.js", "MongoDB", "Firebase", "Docker"],
+    //   category: "APIs",
+    //   github: "#",
+    //   live: "#",
+    //   featured: false,
+    // },
   ];
 
   const filteredProjects =
@@ -143,9 +142,14 @@ export default function ProjectsSection() {
             >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10 flex items-center justify-center">
-                  <div className="text-6xl opacity-20">💻</div>
-                </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={200}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10"></div>
 
                 {/* Featured Badge */}
                 {project.featured && (
@@ -156,22 +160,29 @@ export default function ProjectsSection() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <motion.a
-                    href={project.github}
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Github className="w-5 h-5 text-white" />
-                  </motion.a>
-                  <motion.a
-                    href={project.live}
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <ExternalLink className="w-5 h-5 text-white" />
-                  </motion.a>
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Github className="w-5 h-5 text-white" />
+                    </motion.a>
+                  )}
+
+                  {project.live && (
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <ExternalLink className="w-5 h-5 text-white" />
+                    </motion.a>
+                  )}
                 </div>
               </div>
 
@@ -199,20 +210,24 @@ export default function ProjectsSection() {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </a>
-                  <a
-                    href={project.live}
-                    className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -228,7 +243,9 @@ export default function ProjectsSection() {
         >
           <p className="text-gray-400 mb-6">Want to see more of my work?</p>
           <motion.a
-            href="#"
+            href="https://github.com/vedansh712"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
