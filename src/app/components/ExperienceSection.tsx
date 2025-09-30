@@ -7,56 +7,75 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 
 export default function ExperienceSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const experiences = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      description:
-        "Lead development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
-      achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Led team of 5 developers on major product redesign",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-      ],
-      color: "from-blue-500 to-cyan-500",
-    },
+    // {
+    //   title: "Senior Full Stack Developer",
+    //   company: "TechCorp Solutions",
+    //   location: "San Francisco, CA",
+    //   period: "2022 - Present",
+    //   description:
+    //     "Lead development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
+    //   achievements: [
+    //     "Reduced application load time by 40% through optimization",
+    //     "Led team of 5 developers on major product redesign",
+    //     "Implemented CI/CD pipeline reducing deployment time by 60%",
+    //   ],
+    //   color: "from-blue-500 to-cyan-500",
+    // },
+    // {
+    //   title: "Full Stack Developer",
+    //   company: "StartupXYZ",
+    //   location: "Austin, TX",
+    //   period: "2020 - 2022",
+    //   description:
+    //     "Developed MVP and scaled platform from 0 to 50K users. Built real-time features and integrated third-party APIs.",
+    //   achievements: [
+    //     "Built core platform features from scratch",
+    //     "Integrated payment processing with Stripe",
+    //     "Developed real-time chat and notification system",
+    //   ],
+    //   color: "from-green-500 to-emerald-500",
+    // },
     {
       title: "Full Stack Developer",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      period: "2020 - 2022",
-      description:
-        "Developed MVP and scaled platform from 0 to 50K users. Built real-time features and integrated third-party APIs.",
-      achievements: [
-        "Built core platform features from scratch",
-        "Integrated payment processing with Stripe",
-        "Developed real-time chat and notification system",
-      ],
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency Pro",
+      company: "DreamAlle Solutions",
       location: "Remote",
-      period: "2019 - 2020",
+      period: "2024 - 2025",
       description:
-        "Created responsive websites and web applications for diverse clients. Collaborated with designers to implement pixel-perfect UIs.",
+        "Lead development of scalable web applications from serving 0 to 10K+ users. Architected microservices infrastructure and mentored junior developers.",
+      //   description:
+      //     "Created responsive websites and web applications for diverse clients. Collaborated with designers to implement pixel-perfect UIs.",
       achievements: [
         "Delivered 20+ client projects on time and budget",
         "Improved website performance scores by 50%",
         "Established component library for team efficiency",
       ],
-      color: "from-purple-500 to-pink-500",
+      color: "from-green-500 to-emerald-500",
     },
     {
-      title: "Junior Web Developer",
-      company: "WebDev Studio",
-      location: "New York, NY",
-      period: "2018 - 2019",
+      title: "Software Development Engineer",
+      company: "Akashalabdhi",
+      location: "IIT Roorkee",
+      period: "2023 - 2024",
+      description:
+        "Created responsive websites and web applications for diverse clients. Collaborated with designers to implement pixel-perfect UIs.",
+      //   description:
+      //     "Started career building websites with HTML, CSS, and JavaScript. Learned modern frameworks and best practices.",
+      achievements: [
+        "Completed intensive training program",
+        "Built first production React application",
+        "Contributed to open-source projects",
+      ],
+
+      color: "from-purple-400 to-cyan-500",
+    },
+    {
+      title: "Software Developer Intern",
+      company: "Convival Tech Hub",
+      location: "Remote",
+      period: "6 Months",
       description:
         "Started career building websites with HTML, CSS, and JavaScript. Learned modern frameworks and best practices.",
       achievements: [

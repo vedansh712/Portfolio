@@ -15,7 +15,7 @@ import {
 
 export default function ContactSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,21 +42,21 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "john.developer@email.com",
-      href: "mailto:john.developer@email.com",
+      value: "vedanshsharma712@gmail.com",
+      href: "mailto:vedanshsharma712@gmail.com",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91 9760108830",
+      href: "tel:+919760108830",
       color: "from-green-500 to-emerald-500",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Uttarakhand, INDIA",
       href: "#",
       color: "from-purple-500 to-pink-500",
     },
@@ -66,13 +66,13 @@ export default function ContactSection() {
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/vedansh712",
       color: "hover:text-gray-300",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://linkedin.com/in/vedansh712",
       color: "hover:text-blue-400",
     },
     {
@@ -84,7 +84,7 @@ export default function ContactSection() {
     {
       icon: Mail,
       name: "Email",
-      href: "mailto:john.developer@email.com",
+      href: "mailto:vedanshsharma712@gmail.com",
       color: "hover:text-red-400",
     },
   ];
@@ -99,12 +99,12 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
           <p className="text-lg text-gray-400 mt-6 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can bring your ideas to
-            life.
+            Have a project in mind? Let&apos;s discuss how we can bring your
+            ideas to life.
           </p>
         </motion.div>
 
@@ -250,9 +250,9 @@ export default function ContactSection() {
                 Get in Touch
               </h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                I'm always interested in new opportunities and exciting
+                I&apos;m always interested in new opportunities and exciting
                 projects. Whether you have a question or just want to say hi,
-                I'll try my best to get back to you!
+                I&apos;ll try my best to get back to you!
               </p>
             </div>
 
@@ -299,6 +299,8 @@ export default function ContactSection() {
                   <motion.a
                     key={name}
                     href={href}
+                    target={name === "Email" ? "_self" : "_blank"}
+                    rel={name === "Email" ? undefined : "noopener noreferrer"}
                     className={`p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg text-gray-400 ${color} transition-all duration-300 hover:border-gray-600/50`}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
