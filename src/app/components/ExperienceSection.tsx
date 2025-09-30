@@ -48,9 +48,11 @@ export default function ExperienceSection() {
       //   description:
       //     "Created responsive websites and web applications for diverse clients. Collaborated with designers to implement pixel-perfect UIs.",
       achievements: [
-        "Delivered 20+ client projects on time and budget",
-        "Improved website performance scores by 50%",
-        "Established component library for team efficiency",
+        "Reduced application load time by 30% through optimization",
+        "Designed dynamic prompt pipelines for integration with OpenAI's API",
+        "Led development on major product redesign to MVC principles",
+        "Built core platform features from scratch",
+        "Streamlined Git branching and code review practices for smoother collaboration",
       ],
       color: "from-green-500 to-emerald-500",
     },
@@ -64,9 +66,10 @@ export default function ExperienceSection() {
       //   description:
       //     "Started career building websites with HTML, CSS, and JavaScript. Learned modern frameworks and best practices.",
       achievements: [
-        "Completed intensive training program",
-        "Built first production React application",
-        "Contributed to open-source projects",
+        "Launched dynamic company website that boosted traffic by 30% in three months",
+        "Implemented performance optimizations reducing load time by 20%",
+        "Built mobile app with user-centric features, improving engagement",
+        "Collaborated with design and business teams to deliver intuitive, market-aligned products",
       ],
 
       color: "from-purple-400 to-cyan-500",
@@ -222,7 +225,7 @@ export default function ExperienceSection() {
         </div>
 
         {/* Education Section */}
-        <motion.div
+        {/* <motion.div
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -234,17 +237,17 @@ export default function ExperienceSection() {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                title: "Bachelor of Science in Computer Science",
-                institution: "Tech University",
-                year: "2018",
+                title: "Bachelor of Technology",
+                institution: "Graphic Era University",
+                year: "2019 - 2023",
                 type: "Degree",
               },
-              {
-                title: "AWS Certified Solutions Architect",
-                institution: "Amazon Web Services",
-                year: "2023",
-                type: "Certification",
-              },
+            //   {
+            //     title: "AWS Certified Solutions Architect",
+            //     institution: "Amazon Web Services",
+            //     year: "2023",
+            //     type: "Certification",
+            //   },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -263,7 +266,7 @@ export default function ExperienceSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

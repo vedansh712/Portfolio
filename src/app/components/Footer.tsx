@@ -11,10 +11,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/vedansh712", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/vedansh712",
+      label: "LinkedIn",
+    },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:john.developer@email.com", label: "Email" },
+    { icon: Mail, href: "mailto:vedanshsharma712@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
@@ -45,7 +49,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              John Developer
+              Vedansh Developer
             </h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Full Stack Developer passionate about creating amazing digital
@@ -56,6 +60,8 @@ export default function Footer() {
                 <motion.a
                   key={label}
                   href={href}
+                  target={label === "Email" ? "_self" : "_blank"}
+                  rel={label === "Email" ? undefined : "noopener noreferrer"}
                   className="p-2 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg text-gray-400 hover:text-white hover:border-blue-500/50 transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
@@ -104,9 +110,9 @@ export default function Footer() {
               Get In Touch
             </h4>
             <div className="space-y-2 text-gray-400">
-              <p>john.developer@email.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>vedanshsharma712@gmail.com</p>
+              <p>+91 9760108830</p>
+              {/* <p></p> */}
             </div>
             <motion.div
               className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm"
@@ -136,7 +142,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              © {currentYear} John Developer. Made with{" "}
+              © {currentYear} Vedansh Developer. Made with{" "}
               <motion.span
                 animate={{
                   scale: [1, 1.2, 1],

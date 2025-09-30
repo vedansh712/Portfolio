@@ -20,7 +20,7 @@ export default function ProjectsSection() {
       //     "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.",
       description:
         "Full Stack AI Coaching Platform, Developed leading backend infrastructure and frontend development for scalable applications. Delivered reusable API modules, optimized PostgreSQL schemas and prompt refinement. Implemented security best practices, and streamlined Git workflows for collaborative development.",
-      image: "/stocai.png",
+      image: "/stocaiPage.png",
       tech: ["React", "Next.js", "Python", "PostgreSQL", "JWT", "OpenAI"],
       category: "Web Apps",
       live: "https://www.mystocai.com/",
@@ -42,7 +42,7 @@ export default function ProjectsSection() {
       description:
         "Developed and launched a dynamic company website on AWS, boosting traffic. Implemented optimizations cutting page load time, increasing user satisfaction and conversions. Built a React app while collaborating with design and business teams to ensure intuitive, market-aligned products.",
       image: "/akashalabdhi.png",
-      tech: ["React", "TypeScript", "AWS", "Figma", "Git", "HTML", "CSS"],
+      tech: ["React", "TypeScript", "AWS", "Figma", "Git", "React Native"],
       category: "Web Apps",
       live: "https://akashalabdhi.space/",
       featured: true,

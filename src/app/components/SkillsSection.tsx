@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 export default function SkillsSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const skillCategories = [
     {
@@ -17,7 +17,7 @@ export default function SkillsSection() {
         { name: "Next.js", level: 90, icon: "▲" },
         { name: "TypeScript", level: 88, icon: "🔷" },
         { name: "Tailwind CSS", level: 92, icon: "🎨" },
-        { name: "Vue.js", level: 75, icon: "💚" },
+        // { name: "Vue.js", level: 75, icon: "💚" },
       ],
     },
     {
@@ -27,7 +27,7 @@ export default function SkillsSection() {
         { name: "Node.js", level: 90, icon: "🟢" },
         { name: "Python", level: 85, icon: "🐍" },
         { name: "Express.js", level: 88, icon: "🚀" },
-        { name: "GraphQL", level: 80, icon: "📊" },
+        // { name: "GraphQL", level: 80, icon: "📊" },
         { name: "REST APIs", level: 92, icon: "🔗" },
       ],
     },
