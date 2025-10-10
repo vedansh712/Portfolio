@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 export default function SkillsSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" });
 
   const skillCategories = [
     {

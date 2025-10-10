@@ -23,9 +23,12 @@
    ```
 
 4. **Domain Configuration (Optional)**
-   - For production, you can add your own domain in Resend dashboard
-   - Update the `from` field in `/src/app/api/send-email/route.ts` to use your domain
-   - Example: `from: 'Contact Form <noreply@yourdomain.com>'`
+   - By default, emails are sent from `onboarding@resend.dev` (free tier)
+   - For production with your own domain:
+     1. Add and verify your domain in Resend dashboard (requires DNS records)
+     2. Update the `from` field in `/src/app/api/send-email/route.ts`
+     3. Example: `from: 'Contact Form <noreply@yourdomain.com>'`
+   - **Note**: The free tier with `onboarding@resend.dev` works fine for testing and personal portfolios
 
 ## How it Works
 

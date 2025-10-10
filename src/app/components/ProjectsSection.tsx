@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function ProjectsSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" });
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filters = ["All", "Web Apps", "Extension"];

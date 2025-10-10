@@ -7,7 +7,7 @@ import { Bike, Code, Gamepad2, Heart } from "lucide-react";
 
 export default function AboutSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" });
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
